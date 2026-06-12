@@ -28,6 +28,7 @@ The system allows users to perform CRUD operations, generate ranking reports, an
 * SQL
 * DBMS
 * Data Analytics
+* Power BI
 
 ---
 
@@ -121,6 +122,12 @@ Ranks nations based on:
 * Structured Data Management
 * Ranking Algorithms
 * Economic KPI Analysis
+* Data Visualization
+* Data Import and Transformation
+* DAX Measures and Calculations
+* Interactive Filtering and Slicers
+* SQL Database Integration
+* Power BI Dashboard Development
 
 ---
 
@@ -152,14 +159,17 @@ python main.py
 
 ---
 
-# Future Improvements
+## Recent Updates
 
-* Streamlit Dashboard
-* Graphical User Interface (GUI)
-* Data Visualization
-* CSV/Excel Export
-* Authentication System
-* Real-Time Data Integration
+* Added Power BI dashboard and report files.
+* Uploaded synthetic dataset files in Excel (.xlsx) and CSV (.csv) formats.
+* Included SQL database file used as a data source for Power BI.
+* Updated project documentation to reflect the data import and visualization workflow.
+* Enhanced repository structure for easier access to datasets and project files.
+
+### Workflow
+
+Synthetic Data Generation → SQL Database File → Power BI Import → Dashboard Development → GitHub Repository
 
 ---
 
