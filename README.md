@@ -2,44 +2,64 @@
 
 ## Overview
 
-The Gross Global Index Management System is a database-driven economic analytics application developed using Python and MySQL. The project is designed to manage, analyze, and compare multi-year national economic indicators through a structured backend system and optimized SQL operations.
+The Gross Global Index Management System is a Python-MySQL based economic analytics application developed to manage, analyze, and compare multi-year national economic indicators.
 
-The system allows users to perform CRUD operations, generate ranking reports, analyze nation-wise economic performance, and maintain organized economic datasets efficiently.
+This repository contains **two implementations** of the project:
+
+- **GGI.py** – Creates the database and table from scratch before performing complete CRUD operations.
+- **SQL - python GGI Dynamic Version.py** – Performs data management and analysis on an existing MySQL database with enhanced dynamic functionality.
+
+The project demonstrates SQL database management, Python-MySQL integration, data retrieval, reporting, and analytical operations through a menu-driven console application.
 
 ---
 
 # Features
 
-* Add and manage nation-wise economic records
-* Perform CRUD operations using MySQL
-* Comparative multi-year economic analysis
-* Ranking system based on key economic indicators
-* Optimized SQL query execution
-* Exception handling and input validation
-* Structured tabular data display
-* Menu-driven backend application
+## Database Management
+
+- Create database and table (GGI.py)
+- Insert new economic records
+- Update existing records
+- Delete records
+- Search nation-wise records
+
+## Data Analysis
+
+- Display complete dataset
+- Display selected number of records
+- Generate dynamic ranking reports
+- Compare economic indicators across countries
+- Analyze nation-wise economic performance
+
+## General Features
+
+- Dynamic column header generation
+- Dynamic table formatting
+- Exception handling and input validation
+- Menu-driven backend application
+- Optimized SQL query execution
 
 ---
 
 # Technologies Used
 
-* Python
-* MySQL
-* SQL
-* DBMS
-* Data Analytics
-* Power BI
+- Python
+- MySQL
+- SQL
+- DBMS
+- Data Analytics
+- Power BI
 
 ---
 
 # Economic Indicators Included
 
-* GDP Growth
-* GNP Value
-* Imports Percentage
-* Exports Percentage
-* Literacy Rate
-* Life Expectancy
+- GDP Growth %
+- GNI (Billion USD)
+- Imports % GDP
+- Exports % GDP
+- Literacy Rate %
+- Life Expectancy
 
 ---
 
@@ -52,7 +72,7 @@ CREATE TABLE global_index (
     nation_name VARCHAR(50) NOT NULL,
     nation_code INT UNIQUE NOT NULL,
     gdp_growth DECIMAL(10,2),
-    gnp_value DECIMAL(12,2),
+    gni_value DECIMAL(12,2),
     imports_percent DECIMAL(10,2),
     exports_percent DECIMAL(10,2),
     literacy_rate DECIMAL(5,2),
@@ -67,73 +87,162 @@ CREATE TABLE global_index (
 ```text
 Gross-Global-Index-System/
 │
-├── main.py
+├── GGI.py
+├── SQL - python GGI Dynamic Version.py
 ├── README.md
 ├── database_schema.sql
+├── requirements.txt
 │
-├── screenshots/
-│   └── img-run.png
+├── Dataset/
+│   ├── GGI Dataset.csv
+│   ├── GGI Dataset excel.xlsx
+│   └── gross_global_index.sql
 │
-└── requirements.txt
+├── Power BI Dashboard/
+│   └── GGI Dashboard.pbix
+│
+└── Screenshots/
 ```
 
 ---
 
 # Functional Modules
 
-## 1. Add Nation Data
+## GGI.py
 
-Allows insertion of nation-wise economic indicators into the database.
+- Create database
+- Create table
+- Insert records
+- Display records
+- Update records
+- Delete records
+- Search nation performance
 
-## 2. Display Records
+---
 
-Displays all stored records in a structured tabular format.
+## SQL - python practice.py
 
-## 3. Update Records
+### Display Records
 
-Updates existing economic indicators for a selected nation.
+- Display complete dataset
+- Display selected number of records
 
-## 4. Delete Records
+### Update Records
 
-Deletes records securely using nation code.
+- Update selected economic indicators
 
-## 5. Search Nation Performance
+### Delete Records
 
-Displays economic performance of a nation across multiple years.
+- Delete records based on user input
 
-## 6. Ranking System
+### Search Nation Performance
 
-Ranks nations based on:
+Display complete economic history of a selected nation.
 
-* GDP Growth
-* Literacy Rate
-* Exports
-* Life Expectancy
+### Ranking System
+
+Generate rankings based on:
+
+- GDP Growth %
+- GNI (Billion USD)
+- Imports % GDP
+- Exports % GDP
+- Literacy Rate %
+- Life Expectancy
+
+for any selected year.
+
+---
+
+# Recent Updates
+
+The latest implementation introduces several improvements over the original version.
+
+### New Features
+
+- Dynamic extraction of column names using `cursor.description`
+- Automatic table header generation
+- Dynamic table formatting for queries returning different numbers of columns
+- Dictionary-driven input collection for record insertion
+- Improved ranking system with user-selected economic indicators
+- Row count verification after UPDATE and DELETE operations
+- Enhanced input validation
+- Cleaner console output formatting
+- Improved code modularity and maintainability
+
+### Repository Updates
+
+- Added Power BI dashboard and report files
+- Uploaded synthetic dataset files (.csv and .xlsx)
+- Included SQL database dump used as the Power BI data source
+- Updated project documentation
+- Improved repository organization
+
+---
+
+# Prerequisites
+
+## For GGI.py
+
+No existing database is required.
+
+The program automatically creates:
+
+- Database
+- Tables
+- Schema
+
+before performing CRUD operations.
+
+---
+
+## For SQL - python GGI Dynamic Version.py
+
+An existing MySQL database is required.
+
+Database Name
+
+```
+gross_global_index
+```
+
+Table Name
+
+```
+ggi dataset
+```
+
+The program performs operations on the existing dataset stored in the MySQL environment.
 
 ---
 
 # Key Concepts Applied
 
-* Database Management System (DBMS)
-* SQL Query Optimization
-* Parameterized Queries
-* Comparative Data Analysis
-* Backend Application Development
-* Structured Data Management
-* Ranking Algorithms
-* Economic KPI Analysis
-* Data Visualization
-* Data Import and Transformation
-* DAX Measures and Calculations
-* Interactive Filtering and Slicers
-* SQL Database Integration
-* Power BI Dashboard Development
+- Database Management System (DBMS)
+- SQL CRUD Operations
+- Python-MySQL Integration
+- Cursor Metadata (`cursor.description`)
+- Dynamic SQL Query Execution
+- Dictionary-based Data Collection
+- Dynamic Console Table Formatting
+- Ranking Algorithms
+- Comparative Economic Analysis
+- Exception Handling
+- Data Visualization
+- SQL Database Integration
+- Power BI Dashboard Development
 
 ---
 
 # Application Screenshots
+GGI.py
+<img width="1347" height="896" alt="Screenshot 2026-06-30 151830" src="https://github.com/user-attachments/assets/352210f6-0091-4fca-b27b-49bdabc9f77e" />
+SQL- python GGI Dynamic Version.py 
+<img width="2087" height="1112" alt="Picture3" src="https://github.com/user-attachments/assets/ab839c87-b0f8-4660-8c3c-3e84b54aae97" />
+<img width="1866" height="879" alt="Picture2" src="https://github.com/user-attachments/assets/c66ec5c6-8b40-4f35-853e-37e147e75fa1" />
 
-<img width="1536" height="1024" alt="IMG-RUN" src="https://github.com/user-attachments/assets/e272f0f4-8058-4625-82cf-dc57b299cc10" />
+
+
 
 ---
 
@@ -145,31 +254,39 @@ Ranks nations based on:
 git clone https://github.com/yourusername/gross-global-index-system.git
 ```
 
-## Install MySQL Connector
+## Install Dependencies
 
 ```bash
 pip install mysql-connector-python
 ```
 
+## Database Password
+
+Before running either program, replace:
+
+```python
+password="YOUR_PASSWORD"
+```
+
+with your local MySQL password.
+
 ## Run Project
 
 ```bash
-python main.py
+python GGI.py
+```
+
+or
+
+```bash
+python "SQL - python GGI Dynamic Version.py"
 ```
 
 ---
 
-## Recent Updates
+# Workflow
 
-* Added Power BI dashboard and report files.
-* Uploaded synthetic dataset files in Excel (.xlsx) and CSV (.csv) formats.
-* Included SQL database file used as a data source for Power BI.
-* Updated project documentation to reflect the data import and visualization workflow.
-* Enhanced repository structure for easier access to datasets and project files.
-
-### Workflow
-
-Synthetic Data Generation → SQL Database File → Power BI Import → Dashboard Development → GitHub Repository
+Synthetic Data Generation → MySQL Database → Python CRUD & Analysis Application → Power BI Dashboard → GitHub Repository
 
 ---
 
@@ -181,6 +298,5 @@ Synthetic Data Generation → SQL Database File → Power BI Import → Dashboar
 
 # License
 
-This project is developed for academic and learning purposes.
-
+This project was developed for academic learning and portfolio purposes.
 ---
