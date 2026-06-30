@@ -237,8 +237,11 @@ The program performs operations on the existing dataset stored in the MySQL envi
 # Application Screenshots
 GGI.py
 <img width="1347" height="896" alt="Screenshot 2026-06-30 151830" src="https://github.com/user-attachments/assets/352210f6-0091-4fca-b27b-49bdabc9f77e" />
+
 SQL- python GGI Dynamic Version.py 
 <img width="2087" height="1112" alt="Picture3" src="https://github.com/user-attachments/assets/ab839c87-b0f8-4660-8c3c-3e84b54aae97" />
+
+
 <img width="1866" height="879" alt="Picture2" src="https://github.com/user-attachments/assets/c66ec5c6-8b40-4f35-853e-37e147e75fa1" />
 
 
